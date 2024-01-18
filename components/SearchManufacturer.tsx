@@ -7,7 +7,7 @@ import { Combobox, Transition } from "@headlessui/react";
 import { manufacturers } from "@/constants";
 import { SearchManufacturerProps } from "@/types";
 
-const SearchManufacturer = ({             manufacturer, setManufacturer}: SearchManufacturerProps) => {
+const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacturerProps) => {
   const [query, setQuery] = useState('')
 
   const filteredManufacturers = 
@@ -29,7 +29,7 @@ const SearchManufacturer = ({             manufacturer, setManufacturer}: Search
 
          <Combobox.Input 
           className="search-manufacturer__input"
-          placeholder="Volskwagen"
+          placeholder="Volskwagen..."
           displayValue={(manufacturer: string) => manufacturer}
           onChange={(e) => setQuery(e.target.value)}
          />
